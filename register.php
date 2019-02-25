@@ -1,44 +1,17 @@
-<?php 
+<?php
+	include("includes/classes/Account.php");
+	include("includes/classes/Constants.php");
 
-function sanitizeFormPassword($inputText) {
-	$inputText = strip_tags($inputText);
-	return $inputText;
-}
+	$account = new Account();
 
-function sanitizeFormUsername($inputText) {
-	$inputText = strip_tags($inputText);
-	$inputText = str_replace(" ", "", $inputText);
-	return $inputText;
-}
+	include("includes/handlers/register_handler.php");
+	include("includes/handlers/login_handler.php");
 
-function sanitizeFormString($inputText) {
-	$inputText = strip_tags($inputText);
-	$inputText = str_replace(" ", "", $inputText);
-	$inputText = ucfirst(strtolower($inputText));
-	return $inputText;
-}
-
-if(isset($_POST['loginButton'])) {
-
-}
-
-if(isset($_POST['registerButton'])) {
-    //Register button was pressed
-	$username = sanitizeFormUsername($_POST['username']);
-	
-	$firstName = sanitizeFormString($_POST['firstName']);
-
-	$lastName = sanitizeFormString($_POST['lastName']);
-
-	$email = sanitizeFormString($_POST['email']);
-
-	$email2 = sanitizeFormString($_POST['email2']);
-
-	$password = sanitizeFormPassword($_POST['password']);
-
-	$password2 = sanitizeFormPassword($_POST['password2']);
-}
-
+	function getInputValue($name) {
+		if(isset($_POST[$name])) {
+			echo $_POST[$name];
+		}
+	}
 ?>
 
 <html>
@@ -52,7 +25,7 @@ if(isset($_POST['registerButton'])) {
 			<h2>Login to your account</h2>
 			<p>
 				<label for="loginUsername">Username</label>
-				<input id="loginUsername" name="loginUsername" type="text" placeholder="Username" required>
+				<input id="loginUsername" name="loginUsername" type="text" required>
 			</p>
 			<p>
 				<label for="loginPassword">Password</label>
@@ -64,39 +37,57 @@ if(isset($_POST['registerButton'])) {
 		</form>
 
 
-        <form id="registerForm" action="register.php" method="POST">
+
+		<form id="registerForm" action="register.php" method="POST">
 			<h2>Create your free account</h2>
 			<p>
+				<?php echo $account->getError(Constants::$usernameCharacters); ?>
 				<label for="username">Username</label>
-				<input id="username" name="username" type="text" required>
+				<input id="username" name="username" type="text" value="<?php getInputValue('username') ?>" required>
 			</p>
-            <p>
-				<label for="firsName">First Name</label>
-				<input id="firstName" name="firsName" type="text" required>
-			</p>
-            <p>
-				<label for="lastName">Last Name</label>
-				<input id="lastName" name="lastName" type="text" required>
-			</p>
-            <p>
-				<label for="email">Email</label>
-				<input id="email" name="email" type="text" required>
-			</p>
-            <p>
-				<label for="email2">Confirm Email</label>
-				<input id="email2" name="email2" type="text" required>
-			</p>
+
 			<p>
+				<?php echo $account->getError(Constants::$firstNameCharacters); ?>
+				<label for="firstName">First name</label>
+				<input id="firstName" name="firstName" type="text" value="<?php getInputValue('firstName') ?>" required>
+			</p>
+
+			<p>
+				<?php echo $account->getError(Constants::$lastNameCharacters); ?>
+				<label for="lastName">Last name</label>
+				<input id="lastName" name="lastName" type="text"  value="<?php getInputValue('lastName') ?>" required>
+			</p>
+
+			<p>
+				<?php echo $account->getError(Constants::$emailsDoNotMatch); ?>
+				<?php echo $account->getError(Constants::$emailInvalid); ?>
+				<label for="email">Email</label>
+				<input id="email" name="email" type="email" value="<?php getInputValue('email') ?>" required>
+			</p>
+
+			<p>
+				<label for="email2">Confirm email</label>
+				<input id="email2" name="email2" type="email"  value="<?php getInputValue('email2') ?>" required>
+			</p>
+
+			<p>
+				<?php echo $account->getError(Constants::$passwordsDoNoMatch); ?>
+				<?php echo $account->getError(Constants::$passwordNotAlphanumeric); ?>
+				<?php echo $account->getError(Constants::$passwordCharacters); ?>
 				<label for="password">Password</label>
 				<input id="password" name="password" type="password" required>
 			</p>
-            <p>
-				<label for="password2">Confirm Password</label>
-				<input id="password2" name="password2" type="password" required>
+
+			<p>
+				<label for="password2">Confirm password</label>
+				<input id="password2" name="password2" type="password"required>
 			</p>
-			<button type="submit" name="registerButton">Sign Up</button>
+
+			<button type="submit" name="registerButton">SIGN UP</button>
 			
 		</form>
+
+
 	</div>
 
 </body>
