@@ -43,7 +43,60 @@ html {
     vertical-align: middle;
 }
 
+.controlButton:hover {
+    cursor: pointer;
+}
+
 .controlButton img {
     width: 2rem;
     height: 2rem;
+    margin-right: 1rem;
+}
+
+.controlButton img:not(:last-child) {
+    margin-right: 1rem;
+}
+
+.controlButton.play img,
+.controlButton.pause img {
+    width: 3.2rem;
+    height: 3.2rem;
+}
+
+.playbackBar {
+    display: flex;
+
+}
+
+.progressBar {
+    width: 100%;
+    height: 1.2rem;
+    display: inline-flex;
+    cursor: pointer;
+    
+}
+
+.progressTime {
+    color: #a0a0a0;
+    font-size: 1.1rem;
+    min-width: 4rem;
+    text-align: center;
+}
+
+.progressBarBg {
+    background-color: #404040;
+    height: .4rem;
+    width: 100%;
+    border-radius: .2rem;
+}
+
+.progress {
+    background-color: #a0a0a0;
+    height: .4rem;
+    width: 0;
+    border-radius: .2rem;
+}
+
+.playbackBar .progressBar {
+    margin-top: .3rem;
 }
