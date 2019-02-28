@@ -128,3 +128,19 @@ html {
     font-size: 1.4rem;
     color: #a0a0a0;
 }
+
+.nowPlayingRight {
+    position: relative;
+    margin-top: 1.6rem;
+}
+
+.volumeBar {
+    width: 18rem;
+    position: absolute;
+    right: 0;
+    
+}
+
+.nowPlayingRight .progressBar {
+    width: 12.5rem;
+}
