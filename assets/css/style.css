@@ -2,9 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 html {
     font-size: 62.5%;
+    color: #fff;
 }
 .nowPlayingBarContainer {
     width: 100%;
@@ -32,6 +34,7 @@ html {
 }
 .nowPlayingBar .content {
     width: 100%;
+    height: 5.7rem;
 }
 .playerControls .buttons {
     margin: 0 auto;
@@ -99,4 +102,29 @@ html {
 
 .playbackBar .progressBar {
     margin-top: .3rem;
+}
+
+.albumArtwork {
+    height: 100%;
+    max-width: 5.7rem;
+    margin-right: 1.5rem;
+    float: left;
+    background-size: cover;
+}
+
+.trackInfo {
+    display: table;
+    
+}
+
+.trackName {
+    margin-right: .6rem 0;
+    display: inline-block;
+    width: 100%;
+    font-size: 1.6rem;
+}
+
+.artistName {
+    font-size: 1.4rem;
+    color: #a0a0a0;
 }

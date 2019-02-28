@@ -25,9 +25,21 @@ else {
 
    <div class="nowPlayingBarContainer">
         <div class="nowPlayingBar">
-            <div class="nowPlayingLeft">
 
+            <div class="nowPlayingLeft">
+                <div class="content">
+                    <span class="albumLink">
+                        <img class='albumArtwork' src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Dangerously_In_Love_Album%282003%29.png/220px-Dangerously_In_Love_Album%282003%29.png" alt="album artwork">
+                    </span>
+
+                    <div class="trackInfo">
+                        <span class="trackName">Crazy In Love</span>
+                        <span class="artistName">Beyonce</span>
+                    </div>
+
+                </div>
             </div>
+
             <div class="nowPlayingCenter">
                 <div class="content playerControls">
                     <div class="buttons">
