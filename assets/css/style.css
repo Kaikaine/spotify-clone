@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+.nowPlayingBarContainer {
+    width: 100%;
+    background-color: #282828;
+    position: fixed;
+    bottom: 0;
+    min-width: 62rem;
+}
+.nowPlayingBar {
+    display: flex;
+    height: 9rem;
+    padding: 1.6rem;
+}
+.nowPlayingLeft,
+.nowPlayingRight {
+    width: 30%;
+    min-width: 18rem;
+}
+.nowPlayingCenter {
+    width: 40%;
+    max-width: 70rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nowPlayingBar .content {
+    width: 100%;
+}
+.playerControls .buttons {
+    margin: 0 auto;
+    display: table;
+}
+.controlButton {
+    background-color: transparent;
+    border: none;
+    vertical-align: middle;
+}
+
+.controlButton img {
+    width: 2rem;
+    height: 2rem;
+}
