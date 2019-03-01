@@ -144,3 +144,62 @@ html {
 .nowPlayingRight .progressBar {
     width: 12.5rem;
 }
+
+
+
+.topContainer {
+    min-height: 100%;
+    width: 100%;
+}
+
+.navBarContainer {
+    width: 22rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+}
+
+.navBar {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+}
+
+.logo img {
+    width: 3.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.navBar .group {
+    border-top: .1rem solid #a0a0a0;
+    padding: 1rem 0;
+}
+
+.navItem {
+    padding: 1rem 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    display: block;
+    letter-spacing: .1rem;
+    position: relative;
+}
+
+.navItemLink {
+    color: #a0a0a0;
+    text-decoration: none;
+}
+
+.navItemLink:hover {
+    color: #fff;
+}
+
+.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    top: .6rem;
+    width: 2.5rem;
+}
