@@ -1,205 +1,246 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 html {
-    font-size: 62.5%;
-    color: #fff;
+  font-size: 62.5%;
+  color: #fff;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+}
+body {
+  background-color: #181818;
+  font-size: 1.4rem;
+  min-width: 72rem;
 }
 .nowPlayingBarContainer {
-    width: 100%;
-    background-color: #282828;
-    position: fixed;
-    bottom: 0;
-    min-width: 62rem;
+  width: 100%;
+  background-color: #282828;
+  position: fixed;
+  bottom: 0;
+  min-width: 62rem;
 }
 .nowPlayingBar {
-    display: flex;
-    height: 9rem;
-    padding: 1.6rem;
+  display: flex;
+  height: 9rem;
+  padding: 1.6rem;
 }
 .nowPlayingLeft,
 .nowPlayingRight {
-    width: 30%;
-    min-width: 18rem;
+  width: 30%;
+  min-width: 18rem;
 }
 .nowPlayingCenter {
-    width: 40%;
-    max-width: 70rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 40%;
+  max-width: 70rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .nowPlayingBar .content {
-    width: 100%;
-    height: 5.7rem;
+  width: 100%;
+  height: 5.7rem;
 }
 .playerControls .buttons {
-    margin: 0 auto;
-    display: table;
+  margin: 0 auto;
+  display: table;
 }
 .controlButton {
-    background-color: transparent;
-    border: none;
-    vertical-align: middle;
+  background-color: transparent;
+  border: none;
+  vertical-align: middle;
 }
 
 .controlButton:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .controlButton img {
-    width: 2rem;
-    height: 2rem;
-    margin-right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
 }
 
 .controlButton img:not(:last-child) {
-    margin-right: 1rem;
+  margin-right: 1rem;
 }
 
 .controlButton.play img,
 .controlButton.pause img {
-    width: 3.2rem;
-    height: 3.2rem;
+  width: 3.2rem;
+  height: 3.2rem;
 }
 
 .playbackBar {
-    display: flex;
-
+  display: flex;
 }
 
 .progressBar {
-    width: 100%;
-    height: 1.2rem;
-    display: inline-flex;
-    cursor: pointer;
-    
+  width: 100%;
+  height: 1.2rem;
+  display: inline-flex;
+  cursor: pointer;
 }
 
 .progressTime {
-    color: #a0a0a0;
-    font-size: 1.1rem;
-    min-width: 4rem;
-    text-align: center;
+  color: #a0a0a0;
+  font-size: 1.1rem;
+  min-width: 4rem;
+  text-align: center;
 }
 
 .progressBarBg {
-    background-color: #404040;
-    height: .4rem;
-    width: 100%;
-    border-radius: .2rem;
+  background-color: #404040;
+  height: 0.4rem;
+  width: 100%;
+  border-radius: 0.2rem;
 }
 
 .progress {
-    background-color: #a0a0a0;
-    height: .4rem;
-    width: 0;
-    border-radius: .2rem;
+  background-color: #a0a0a0;
+  height: 0.4rem;
+  width: 0;
+  border-radius: 0.2rem;
 }
 
 .playbackBar .progressBar {
-    margin-top: .3rem;
+  margin-top: 0.3rem;
 }
 
 .albumArtwork {
-    height: 100%;
-    max-width: 5.7rem;
-    margin-right: 1.5rem;
-    float: left;
-    background-size: cover;
+  height: 100%;
+  max-width: 5.7rem;
+  margin-right: 1.5rem;
+  float: left;
+  background-size: cover;
 }
 
 .trackInfo {
-    display: table;
-    
+  display: table;
 }
 
 .trackName {
-    margin-right: .6rem 0;
-    display: inline-block;
-    width: 100%;
-    font-size: 1.6rem;
+  margin-right: 0.6rem 0;
+  display: inline-block;
+  width: 100%;
+  font-size: 1.6rem;
 }
 
 .artistName {
-    font-size: 1.4rem;
-    color: #a0a0a0;
+  font-size: 1.4rem;
+  color: #a0a0a0;
 }
 
 .nowPlayingRight {
-    position: relative;
-    margin-top: 1.6rem;
+  position: relative;
+  margin-top: 1.6rem;
 }
 
 .volumeBar {
-    width: 18rem;
-    position: absolute;
-    right: 0;
-    
+  width: 18rem;
+  position: absolute;
+  right: 0;
 }
 
 .nowPlayingRight .progressBar {
-    width: 12.5rem;
+  width: 12.5rem;
 }
 
-
-
 .topContainer {
-    min-height: 100%;
-    width: 100%;
+  min-height: 100%;
+  width: 100%;
 }
 
 .navBarContainer {
-    width: 22rem;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: black;
+  width: 22rem;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
 }
 
 .navBar {
-    padding: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    -ms-flex-direction: column;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
 }
 
 .logo img {
-    width: 3.2rem;
-    margin-bottom: 1.2rem;
+  width: 3.2rem;
+  margin-bottom: 1.2rem;
 }
 
 .navBar .group {
-    border-top: .1rem solid #a0a0a0;
-    padding: 1rem 0;
+  border-top: 0.1rem solid #a0a0a0;
+  padding: 1rem 0;
 }
 
 .navItem {
-    padding: 1rem 0;
-    font-size: 1.4rem;
-    font-weight: 600;
-    display: block;
-    letter-spacing: .1rem;
-    position: relative;
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  display: block;
+  letter-spacing: 0.1rem;
+  position: relative;
 }
 
 .navItemLink {
-    color: #a0a0a0;
-    text-decoration: none;
+  color: #a0a0a0;
+  text-decoration: none;
 }
 
 .navItemLink:hover {
-    color: #fff;
+  color: #fff;
 }
 
 .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-    top: .6rem;
-    width: 2.5rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  top: 0.6rem;
+  width: 2.5rem;
+}
+
+.mainViewContainer {
+  margin-left: 22rem;
+  padding-bottom: 9rem;
+  width: calc(100% - 22rem);
+}
+
+.mainContent {
+  padding: 0 2rem;
+}
+
+.pageHeadingBig {
+  padding: 2rem;
+  text-align: center;
+}
+
+.gridViewItem {
+  display: inline-block;
+  margin-right: 2rem;
+  width: 29%;
+  max-width: 20rem;
+  min-width: 15rem;
+  margin-bottom: 2rem;
+}
+
+.gridViewItem img {
+  width: 100%;
+}
+
+.gridViewInfo {
+  font-weight: 300;
+  text-align: center;
+  padding: 0.5rem 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
