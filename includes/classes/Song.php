@@ -19,7 +19,7 @@
 			$this->mysqliData = mysqli_fetch_array($query);
 			$this->title = $this->mysqliData['title'];
 			$this->artistId = $this->mysqliData['artist'];
-			$this->albumId = $this->mysqliData['albums'];
+			$this->albumId = $this->mysqliData['album'];
 			$this->genre = $this->mysqliData['genre'];
 			$this->duration = $this->mysqliData['duration'];
 			$this->path = $this->mysqliData['path'];
